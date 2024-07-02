@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.vaadin</groupId>
     <artifactId>textfieldformatter</artifactId>
-    <version>5.5-SNAPSHOT</version>
+    <version>5.5.0-SNAPSHOT</version>
     <name>TextField Formatter</name>
     <packaging>jar</packaging>
     <organization>
@@ -10,7 +10,7 @@
     </organization>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <vaadin.version>14.8.4</vaadin.version>
+        <vaadin.version>24.4.1</vaadin.version>
         <vaadin.plugin.version>${vaadin.version}</vaadin.plugin.version>
         <!-- ZIP Manifest fields -->
         <Implementation-Version>${project.version}</Implementation-Version>

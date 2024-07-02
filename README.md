@@ -7,6 +7,8 @@ This is an awesome TextField formatter extension built on top [Cleave.js](https:
 Supports credit card formatting and custom blocks e.g. IBAN. 
 
 # Builds
+### Vaadin 24 (5.5.0 branch)
+
 ### Vaadin 14 (master)
 [![Build Status](https://travis-ci.org/johannesh2/textfieldformatter.svg?branch=master)](https://travis-ci.org/johannesh2/textfieldformatter)
 
