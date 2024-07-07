@@ -12,7 +12,6 @@ import com.vaadin.flow.router.RouterLayout;
 import com.vaadin.flow.router.RouterLink;
 
 @Route
-//@Theme(Lumo.class)
 public class MainView extends HorizontalLayout implements RouterLayout {
 
 	private VerticalLayout menu;
