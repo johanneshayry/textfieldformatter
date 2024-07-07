@@ -38,7 +38,7 @@ public abstract class AbstractCustomTestBenchTestCase extends TestBenchTestCase 
 		ChromeOptions opt = new ChromeOptions();
 		String headless = System.getProperty("test.headless");
 		if (headless != null && Boolean.valueOf(headless)) {
-			opt.setHeadless(true);
+			opt.addArguments("--headless=new");
 		}
 		driver = new ChromeDriver(opt);
 		setDriver(driver);
