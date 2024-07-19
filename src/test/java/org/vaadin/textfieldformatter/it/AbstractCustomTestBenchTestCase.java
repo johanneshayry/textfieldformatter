@@ -34,13 +34,7 @@ public abstract class AbstractCustomTestBenchTestCase extends TestBenchTestCase 
 	}
 
 	protected void startBrowser(WebDriver driver) {
-
-		ChromeOptions opt = new ChromeOptions();
-		String headless = System.getProperty("test.headless");
-		if (headless != null && Boolean.valueOf(headless)) {
-			opt.setHeadless(true);
-		}
-		driver = new ChromeDriver(opt);
+		driver = new ChromeDriver();
 		setDriver(driver);
 	}
 

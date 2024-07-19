@@ -10,6 +10,7 @@ import org.vaadin.textfieldformatter.DateFieldFormatterUI.MinMax;
 import org.vaadin.textfieldformatter.DateFieldFormatterUI.MonthYear;
 
 import com.vaadin.flow.component.Component;
+import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.textfield.TextField;
 
 @RouteParams({ Max.class, Min.class, MinMax.class, FinnishDate.class, AmericanDate.class, MonthYear.class })
@@ -31,6 +32,9 @@ public class DateFieldFormatterUI extends AbstractTest {
 		public Component getTestComponent() {
 			TextField field = new TextField("Date after Feb 3, 2019");
 			new DateFieldFormatter.Builder().dateMin(LocalDate.of(2019, 2, 4)).build().extend(field);
+			field.addValueChangeListener(e -> {
+				Notification.show(e.getValue());
+			});
 			return field;
 		}
 	}

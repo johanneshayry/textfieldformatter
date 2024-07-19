@@ -3,6 +3,8 @@ package org.vaadin.textfieldformatter.it;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.vaadin.textfieldformatter.DateFieldFormatterUI;
 
 import com.vaadin.flow.component.textfield.testbench.TextFieldElement;
