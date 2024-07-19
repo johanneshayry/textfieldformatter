@@ -1,12 +1,15 @@
-package org.vaadin.textfieldformatterzen;
+package org.vaadin.formatter;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import org.vaadin.formatter.conf.CleaveZenExtension;
+import org.vaadin.formatter.conf.FormatCreditCardOptions;
+
 import com.vaadin.flow.component.ClientCallable;
 import com.vaadin.flow.component.textfield.TextField;
 
-public class ZenCreditCardFieldFormatter extends CleaveZenExtension {
+public class ZenCreditCardFieldFormatter extends CleaveZenExtension<FormatCreditCardOptions> {
 
 	private final List<CreditCardChangedListener> listeners = new ArrayList<>();
 
@@ -15,8 +18,12 @@ public class ZenCreditCardFieldFormatter extends CleaveZenExtension {
 	}
 
 	public ZenCreditCardFieldFormatter(boolean support19DigitPAN) {
-		getConfiguration().creditCard = true;
 		getConfiguration().creditCardStrictMode = support19DigitPAN;
+	}
+
+	@Override
+	protected FormatCreditCardOptions createDefaultConfiguration() {
+		return new FormatCreditCardOptions();
 	}
 
 	/**

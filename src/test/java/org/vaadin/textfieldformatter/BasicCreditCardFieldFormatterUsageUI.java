@@ -2,6 +2,7 @@ package org.vaadin.textfieldformatter;
 
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.notification.Notification;
+import com.vaadin.flow.component.textfield.TextArea;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.data.value.ValueChangeMode;
 

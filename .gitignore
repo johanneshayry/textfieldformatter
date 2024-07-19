@@ -8,3 +8,10 @@ node_modules
 webpack.config.js
 webpack.generated.js
 /bin/
+/src/main/frontend/
+/tsconfig.json
+/types.d.ts
+/vite.config.ts
+/vite.generated.ts
+/.idea/
+/error-screenshots/
