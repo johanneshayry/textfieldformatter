@@ -1,10 +1,6 @@
 import { PolymerElement } from '@polymer/polymer/polymer-element.js';
 import Cleave from 'cleave.js';
 
-if (window.JH.AsYouTypeFormatter && typeof window.JH.AsYouTypeFormatter === 'function' && typeof window.Cleave.AsYouTypeFormatter === 'undefined') {
-	window.Cleave.AsYouTypeFormatter = window.JH.AsYouTypeFormatter;
-}
-
 /**
  * `jh-textfield-formatter` Polymer 2 Web Component wrapper for Cleave.js
  *
@@ -23,12 +19,14 @@ class JhTextfieldFormatter extends PolymerElement {
       cleave: {
         type: Object
       },
-
     };
   }
 
   connectedCallback() {
     super.connectedCallback();
+    if (!window.Cleave.AsYouTypeFormatter && window.JH.AsYouTypeFormatter && typeof window.JH.AsYouTypeFormatter === 'function') {
+	window.Cleave.AsYouTypeFormatter = window.JH.AsYouTypeFormatter;
+    }
     if (this.conf && !this.cleave) {
       let el = this.parentElement.shadowRoot.querySelector('input'); // retrocompatibility purposes
       if(!el) el = this.parentElement.querySelector('input');
