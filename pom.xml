@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.vaadin</groupId>
 	<artifactId>textfieldformatter</artifactId>
-	<version>23.3.1</version>
+	<version>23.3.2</version>
 	<name>TextField Formatter</name>
 	<packaging>jar</packaging>
 	<organization>
@@ -303,7 +303,7 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-assembly-plugin</artifactId>
-						<version>3.1.1</version>
+						<version>3.3.0</version>
 						<configuration>
 							<appendAssemblyId>false</appendAssemblyId>
 							<descriptors>
