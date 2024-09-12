@@ -1,7 +1,7 @@
 import { PolymerElement } from '@polymer/polymer/polymer-element.js';
 import Cleave from 'cleave.js';
 
-if (typeof window.JH.AsYouTypeFormatter === 'function' && typeof window.Cleave.AsYouTypeFormatter === 'undefined') {
+if (window.JH.AsYouTypeFormatter && typeof window.JH.AsYouTypeFormatter === 'function' && typeof window.Cleave.AsYouTypeFormatter === 'undefined') {
 	window.Cleave.AsYouTypeFormatter = window.JH.AsYouTypeFormatter;
 }
 
